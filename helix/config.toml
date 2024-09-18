@@ -1,0 +1,100 @@
+theme = "adams_theme"
+
+[editor]
+scrolloff = 20
+mouse = false
+line-number = "relative"
+cursorline = true
+auto-completion = true
+auto-format = false
+preview-completion-insert = true
+auto-info = true
+true-color = true
+bufferline = "always"
+color-modes = true
+popup-border = "all"
+indent-heuristic = "hybrid"
+end-of-line-diagnostics = "hint"
+completion-timeout = 5
+idle-timeout = 5
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "block"
+
+[editor.statusline]
+left = [
+  "spacer", 
+  "spacer",
+  "mode", 
+  "spacer", 
+  "spinner", 
+  "spacer", 
+  "position", 
+  "separator", 
+  "total-line-numbers"
+]
+center = [
+  "read-only-indicator", 
+  "spacer",
+  "separator", 
+  "file-name", 
+  "separator", 
+  "spacer",
+  "file-modification-indicator"
+]
+right = [
+  "diagnostics", 
+  "spacer", 
+  "version-control", 
+  "file-encoding", 
+  "file-type", 
+  "register", 
+  "spacer"
+]
+separator = "▮"
+mode.normal = " ~ normal ~ "
+mode.insert = " + insert + "
+mode.select = " = visual = "
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+display-inlay-hints = false
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = false
+after-delay.timeout = 6000
+
+[editor.whitespace]
+render.newline = "all"
+render.tab = "all" 
+characters.newline = "~"
+
+[editor.indent-guides]
+render = true
+character = "`"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.smart-tab]
+enable = false
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
+O = ":cd C:/Users/Adam/Desktop/projects"
+H = ":toggle lsp.display-inlay-hints"
+h = ":toggle end-of-line-diagnostics hint error"
+
+[keys.normal.z]
+u = ":reflow"
