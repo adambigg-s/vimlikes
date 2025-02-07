@@ -5,5 +5,16 @@ auto-format = false
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-[language-server.rust-analyzer.config.diagnostics]
-disabled = ["inactive-code"]
+# [language-server.rust-analyzer.config.diagnostics]
+# disabled = ["inactive-code"]
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
+
+[language-server.clangd]
+FormatStyle = { IndentWidth = 4 }

@@ -1,4 +1,7 @@
-theme = "adams_theme"
+# theme = "adams_theme"
+# theme = "gruvbox"
+theme = "adams_gruvbox"
+# theme = "adams_rose_pine"
 
 [editor]
 scrolloff = 20
@@ -17,11 +20,15 @@ indent-heuristic = "hybrid"
 end-of-line-diagnostics = "hint"
 completion-timeout = 5
 idle-timeout = 5
+rulers = [120]
 
 [editor.cursor-shape]
 insert = "block"
 normal = "block"
 select = "block"
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
 
 [editor.statusline]
 left = [
@@ -53,10 +60,10 @@ right = [
   "register", 
   "spacer"
 ]
-separator = "▮"
-mode.normal = " ~ normal ~ "
-mode.insert = " + insert + "
-mode.select = " = visual = "
+separator = " "
+mode.normal = ". normal ."
+mode.insert = "+ insert +"
+mode.select = "= visual ="
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
@@ -78,11 +85,11 @@ after-delay.timeout = 6000
 [editor.whitespace]
 render.newline = "all"
 render.tab = "all" 
-characters.newline = "~"
+characters.newline = "`"
 
 [editor.indent-guides]
 render = true
-character = "`"
+character = "."
 
 [editor.soft-wrap]
 enable = true
@@ -90,11 +97,25 @@ enable = true
 [editor.smart-tab]
 enable = false
 
+[keys.normal]
+"ret" = "goto_word"
+
 [keys.normal."space"]
 o = "file_picker_in_current_buffer_directory"
 O = ":cd C:/Users/Adam/Desktop/projects"
 H = ":toggle lsp.display-inlay-hints"
 h = ":toggle end-of-line-diagnostics hint error"
+N = ":bc"
 
 [keys.normal.z]
 u = ":reflow"
+i = ":sh cargo run > output.txt"
+
+[keys.select]
+V = "extend_to_line_bounds"
+
+[keys.insert]
+"C-backspace" = "delete_word_backward"
+
+[editor.file-picker]
+hidden = false

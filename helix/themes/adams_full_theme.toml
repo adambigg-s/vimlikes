@@ -1,0 +1,125 @@
+# adam's dark theme
+# easy on the eyes
+# good for rust with minimal color palette
+# author: adam
+#   github.com/adambigg-s
+
+# based off some neovim themes seen on jdh's videos 
+  # github.com/jdah
+
+
+
+# how to do it 
+# key = 
+#   { fg = "#ffffff", 
+#     bg = "#000000", 
+#     underline = { color = "#ff0000", style = "curl"}, 
+#     modifiers = ["bold", "italic"] 
+#   }
+
+
+
+### EDITOR UI 
+"ui.background" = { bg = "bg0" }
+"ui.background.separator" = "bg_visual"
+
+"ui.cursor" = { fg = "bg1", bg = "grey2" }
+"ui.cursor.match" = { fg = "orange", bg = "bg_yellow" }
+
+"ui.cursor.insert" = { fg = "bg0", bg = "grey1" }
+"ui.cursor.select" = { fg = "bg0", bg = "blue" }
+"ui.cursor.primary" = { fg = "bg0", bg = "fg" }
+"ui.cursorline.primary" = { bg = "bg1" }
+"ui.cursorline.secondary" = { bg = "bg2" }
+"ui.selection" = { bg = "bg3" }
+"ui.linenr" = "grey0"
+"ui.linenr.selected" = "grey2"
+"ui.statusline" = { fg = "grey2", bg = "bg3" }
+"ui.statusline.inactive" = { fg = "grey0", bg = "bg1" }
+"ui.statusline.normal" = { fg = "bg0", bg = "statusline1", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg0", bg = "statusline2", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg0", bg = "blue", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "grey2", bg = "bg3" }
+"ui.bufferline.active" = { fg = "bg0", bg = "statusline1", modifiers = ["bold"] }
+"ui.popup" = { fg = "grey2", bg = "bg2" }
+"ui.window" = { fg = "bg4", bg = "bg_dim" }
+"ui.help" = { fg = "fg", bg = "bg2" }
+"ui.text" = "fg"
+"ui.text.focus" = "fg"
+"ui.menu" = { fg = "fg", bg = "bg3" }
+"ui.menu.selected" = { fg = "bg0", bg = "green" }
+"ui.virtual.ruler" = { bg = "bg3" }
+"ui.virtual.whitespace" = { fg = "bg4" }
+"ui.virtual.indent-guide" = { fg = "bg4" }
+"ui.virtual.inlay-hint" = { fg = "grey0" }
+"ui.virtual.wrap" = { fg = "grey0" }
+
+"hint" = "green"
+"info" = "blue"
+"warning" = "yellow"
+"error" = "red"
+
+"diagnostic.hint" = { underline = { color = "green", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+[palette]
+"background" = "#232324"
+"text" = "#c4c4c4"
+
+"white" = "#ffffff"
+
+"ex_red" = "#d94f45"
+
+"cursor_normal" = "#af7070"
+"cursor_insert" = "#809164"
+"cursor_select" = "#58827d"
+
+
+bg_dim = "#232a2e"
+bg0 = "#2d353b"
+bg1 = "#343f44"
+bg2 = "#3d484d"
+bg3 = "#475258"
+bg4 = "#4f585e"
+bg5 = "#56635f"
+bg_visual = "#543a48"
+bg_red = "#514045"
+bg_green = "#425047"
+bg_blue = "#3a515d"
+bg_yellow = "#4d4c43"
+
+fg = "#d3c6aa"
+red = "#e67e80"
+orange = "#e69875"
+yellow = "#dbbc7f"
+green = "#a7c080"
+aqua = "#83c092"
+blue = "#7fbbb3"
+purple = "#d699b6"
+
+grey0 = "#7a8478"
+grey1 = "#859289"
+grey2 = "#9da9a0"
+
+statusline1 = "#a7c080"
+statusline2 = "#d3c6aa"
+statusline3 = "#e67e80"
+
+# "ui.background" = { fg = "text", bg = "background" }
+# "ui.background.separator" = "white"
+
+# "ui.cursor" = { fg = "text", bg = "cursor_normal" }
+# "ui.cursor.normal" = { fg = "text", bg = "cursor_normal", modifiers = ["dim"] }
+# "ui.cursor.insert" = { fg = "text", bg = "cursor_insert", modifiers = ["dim"] }
+# "ui.cursor.select" = { fg = "text", bg = "cursor_select", modifiers = ["dim"] }
+
+# "ui.cursor.primary" = { fg = "text", bg = "cursor_normal" }
+# "ui.cursor.match" = { bg = "white" }
+
+# "ui.cursor.primary.normal" = { fg = "text", bg = "cursor_normal" }
+# "ui.cursor.primary.insert" = { fg = "text", bg = "cursor_insert" }
+# "ui.cursor.primary.select" = { fg = "text", bg = "cursor_select" }
