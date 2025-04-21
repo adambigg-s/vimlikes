@@ -1,6 +1,10 @@
 # theme = "adams_theme"
+# theme = "adams_theme_minimal"
 # theme = "gruvbox"
-theme = "adams_gruvbox"
+# theme = "gruvbox_dark_hard"
+# theme = "adams_gruvbox"
+# theme = "base16_terminal"
+theme = "base16_default_dark"
 # theme = "adams_rose_pine"
 
 [editor]
@@ -20,7 +24,7 @@ indent-heuristic = "hybrid"
 end-of-line-diagnostics = "hint"
 completion-timeout = 5
 idle-timeout = 5
-rulers = [120]
+rulers = [110]
 
 [editor.cursor-shape]
 insert = "block"
@@ -118,4 +122,4 @@ V = "extend_to_line_bounds"
 "C-backspace" = "delete_word_backward"
 
 [editor.file-picker]
-hidden = false
+hidden = true

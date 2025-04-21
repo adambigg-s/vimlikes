@@ -1,20 +1,36 @@
 [[language]]
 name = "rust"
 auto-format = false
+formatter = { command = "rustfmt", args = ["--config", "control_brace_style=ClosingNextLine", "--config", "max_width=110", "--config", "use_small_heuristics=max", "--config", "single_line_if_else_max_width=0", "--config", "single_line_let_else_max_width=0", "--config", "fn_args_layout=Compressed"] }
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-# [language-server.rust-analyzer.config.diagnostics]
-# disabled = ["inactive-code"]
-
 [[language]]
 name = "c"
+scope = "source.c"
+file-types = ["c", "h"]
 indent = { tab-width = 4, unit = "    " }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4}"] }
 
 [[language]]
 name = "cpp"
+scope = "source.cpp"
+file-types = ["cpp", "hpp"]
 indent = { tab-width = 4, unit = "    " }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4}"] }
 
 [language-server.clangd]
-FormatStyle = { IndentWidth = 4 }
+command = "clangd"
+args = ["--clang-tidy"]
+
+[[language]]
+name = "odin"
+scope = "source.odin"
+file-types = ["odin"]
+formatter = { command = "C:/Users/Adam/odin/ols/ols-nightly/ols-nightly/odinfmt.exe", args = ["-stdin"] }
+auto-format = true
+
+[language-server.ols]
+command = "C:/Users/Adam/odin/ols/ols-nightly/ols-nightly/ols.exe"
+timeout = 10
