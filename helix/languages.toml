@@ -11,14 +11,14 @@ name = "c"
 scope = "source.c"
 file-types = ["c", "h"]
 indent = { tab-width = 4, unit = "    " }
-formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4}"] }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AllowShortIfStatementsOnASingleLine: false, AllowShortBlocksOnASingleLine: false, AllowShortCaseLabelsOnASingleLine: false, AllowShortFunctionsOnASingleLine: InlineOnly, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4, BreakBeforeBraces: Attach, BraceWrapping: {AfterControlStatement: true, AfterFunction: false, AfterClass: false, AfterNamespace: true, AfterStruct: false, AfterEnum: false, BeforeCatch: true, BeforeElse: true, IndentBraces: false}}"] }
 
 [[language]]
 name = "cpp"
 scope = "source.cpp"
 file-types = ["cpp", "hpp"]
 indent = { tab-width = 4, unit = "    " }
-formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4}"] }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AllowShortIfStatementsOnASingleLine: false, AllowShortBlocksOnASingleLine: false, AllowShortCaseLabelsOnASingleLine: false, AllowShortFunctionsOnASingleLine: InlineOnly, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4, BreakBeforeBraces: Attach, BraceWrapping: {AfterControlStatement: true, AfterFunction: false, AfterClass: false, AfterNamespace: true, AfterStruct: false, AfterEnum: false, BeforeCatch: true, BeforeElse: true, IndentBraces: false}}"] }
 
 [language-server.clangd]
 command = "clangd"
