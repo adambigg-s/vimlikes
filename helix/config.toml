@@ -4,7 +4,8 @@
 # theme = "gruvbox_dark_hard"
 # theme = "adams_gruvbox"
 # theme = "base16_terminal"
-theme = "base16_default_dark"
+# theme = "base16_default_dark"
+theme = "kanagawa-dragon"
 # theme = "adams_rose_pine"
 
 [editor]
@@ -27,9 +28,9 @@ idle-timeout = 5
 rulers = [110]
 
 [editor.cursor-shape]
-insert = "block"
+insert = "bar"
 normal = "block"
-select = "block"
+select = "underline"
 
 [editor.gutters]
 layout = ["diff", "diagnostics", "line-numbers", "spacer"]
