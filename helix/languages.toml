@@ -1,7 +1,7 @@
 [[language]]
 name = "rust"
 auto-format = false
-formatter = { command = "rustfmt", args = ["--config", "control_brace_style=ClosingNextLine", "--config", "max_width=110", "--config", "use_small_heuristics=max", "--config", "single_line_if_else_max_width=0", "--config", "single_line_let_else_max_width=0", "--config", "fn_args_layout=Compressed"] }
+formatter = { command = "rustfmt", args = ["--config", "control_brace_style=ClosingNextLine", "--config", "max_width=110", "--config", "use_small_heuristics=default", "--config", "single_line_if_else_max_width=70", "--config", "single_line_let_else_max_width=75", "--config", "match_arm_leading_pipes=Always", "--config", "struct_lit_width=55", "--config", "struct_variant_width=55", "--config", "chain_width=90", "--config", "fn_call_width=90", "--edition", "2024"] }
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
@@ -34,3 +34,8 @@ auto-format = true
 [language-server.ols]
 command = "C:/Users/Adam/odin/ols/ols-nightly/ols-nightly/ols.exe"
 timeout = 10
+
+[[language]]
+name = "fortran"
+file-types = ["f", "for", "f90", "f08"]
+formatter = { command = "fprettify" }

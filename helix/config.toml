@@ -26,6 +26,7 @@ end-of-line-diagnostics = "hint"
 completion-timeout = 5
 idle-timeout = 5
 rulers = [110]
+rainbow-brackets = false
 
 [editor.cursor-shape]
 insert = "bar"
