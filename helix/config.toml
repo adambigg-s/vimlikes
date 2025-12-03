@@ -1,12 +1,8 @@
-# theme = "adams_theme"
-# theme = "adams_theme_minimal"
 # theme = "gruvbox"
 # theme = "gruvbox_dark_hard"
-# theme = "adams_gruvbox"
 # theme = "base16_terminal"
 # theme = "base16_default_dark"
 theme = "kanagawa-dragon"
-# theme = "adams_rose_pine"
 
 [editor]
 scrolloff = 20
