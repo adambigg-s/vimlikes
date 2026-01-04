@@ -1,11 +1,14 @@
 [[language]]
 name = "rust"
 auto-format = false
-formatter = { command = "rustfmt", args = ["--config", "control_brace_style=ClosingNextLine", "--config",
-"max_width=110", "--config", "use_small_heuristics=default", "--config", "single_line_if_else_max_width=70",
-"--config", "single_line_let_else_max_width=75", "--config", "match_arm_leading_pipes=Always", "--config",
-"struct_lit_width=55", "--config", "struct_variant_width=55", "--config", "chain_width=90", "--config",
-"fn_call_width=90", "--edition", "2024"] }
+formatter = { command = "rustfmt", args = ["--config", "control_brace_style=ClosingNextLine", "--config", "max_width=110", "--config", "use_small_heuristics=default", "--config", "single_line_if_else_max_width=70", "--config", "single_line_let_else_max_width=75", "--config", "match_arm_leading_pipes=Always", "--config", "struct_lit_width=55", "--config", "struct_variant_width=55", "--config", "chain_width=90", "--config", "fn_call_width=90", "--edition", "2024"] }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
@@ -15,24 +18,14 @@ name = "c"
 scope = "source.c"
 file-types = ["c", "h"]
 indent = { tab-width = 4, unit = "    " }
-formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never",
-"ColumnLimit: 110, AllowShortIfStatementsOnASingleLine: false, AllowShortBlocksOnASingleLine: false",
-"AllowShortCaseLabelsOnASingleLine: false, AllowShortFunctionsOnASingleLine: InlineOnly, AlignAfterOpenBracket:",
-"DontAlign, ContinuationIndentWidth: 4, BreakBeforeBraces: Attach, BraceWrapping: {AfterControlStatement: true,",
-"AfterFunction: false, AfterClass: false, AfterNamespace: true, AfterStruct: false, AfterEnum: false, BeforeCatch:",
-"true, BeforeElse: true, IndentBraces: false}}"] }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AllowShortIfStatementsOnASingleLine: false, AllowShortBlocksOnASingleLine: false, AllowShortCaseLabelsOnASingleLine: false, AllowShortFunctionsOnASingleLine: InlineOnly, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4, BreakBeforeBraces: Attach, BraceWrapping: {AfterControlStatement: true, AfterFunction: false, AfterClass: false, AfterNamespace: true, AfterStruct: false, AfterEnum: false, BeforeCatch: true, BeforeElse: true, IndentBraces: false}}"] }
 
 [[language]]
 name = "cpp"
 scope = "source.cpp"
 file-types = ["cpp", "hpp"]
 indent = { tab-width = 4, unit = "    " }
-formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never",
-"ColumnLimit: 110, AllowShortIfStatementsOnASingleLine: false, AllowShortBlocksOnASingleLine: false",
-"AllowShortCaseLabelsOnASingleLine: false, AllowShortFunctionsOnASingleLine: InlineOnly, AlignAfterOpenBracket:",
-"DontAlign, ContinuationIndentWidth: 4, BreakBeforeBraces: Attach, BraceWrapping: {AfterControlStatement: true,",
-"AfterFunction: false, AfterClass: false, AfterNamespace: true, AfterStruct: false, AfterEnum: false, BeforeCatch:",
-"true, BeforeElse: true, IndentBraces: false}}"] }
+formatter = { command = "clang-format", args = ["-style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never, ColumnLimit: 110, AllowShortIfStatementsOnASingleLine: false, AllowShortBlocksOnASingleLine: false, AllowShortCaseLabelsOnASingleLine: false, AllowShortFunctionsOnASingleLine: InlineOnly, AlignAfterOpenBracket: DontAlign, ContinuationIndentWidth: 4, BreakBeforeBraces: Attach, BraceWrapping: {AfterControlStatement: true, AfterFunction: false, AfterClass: false, AfterNamespace: true, AfterStruct: false, AfterEnum: false, BeforeCatch: true, BeforeElse: true, IndentBraces: false}}"] }
 
 [language-server.clangd]
 command = "clangd"
